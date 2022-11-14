@@ -38,7 +38,8 @@ public class Main {
 
         //JsonObject a = (JsonObject) valueStr;
         Path report = Path.of(tests.getParent()+"reports.json");
-        //Files reports = Files.createFile(report.toString());
+       // Files reports = Files.createFile(Path.of(tests.getParent()+"reports.json"));
+        Files.writeString(report, g.toJson(testsJson));
 
 
     }
